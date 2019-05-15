@@ -5,7 +5,7 @@ install:
   - npm link
 services:
   - docker
-  env:
+env:
   - TESTFOLDER=test/cli-commands
   - TESTFOLDER=test/deployed-contract
   - TESTFOLDER=test/deployer
@@ -16,6 +16,6 @@ services:
 script:
   - etherlime ganache &> /dev/null &
   - sleep 10
-  - bundle exec rspec $TESTFOLDER
+  - npm test
 after_success: 
   - npm run coverage
