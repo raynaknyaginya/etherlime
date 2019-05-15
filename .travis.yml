@@ -16,6 +16,6 @@ env:
 script:
   - etherlime ganache &> /dev/null &
   - sleep 10
-  - npm test:$TEST_SUITE
+  - npm test $TESTFOLDER
 after_success: 
   - npm run coverage
