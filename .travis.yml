@@ -5,7 +5,7 @@ install:
   - npm link
 services:
   - docker
-  env:
+env:
   - TESTFOLDER=test/cli-commands
   - TESTFOLDER=test/deployed-contract
   - TESTFOLDER=test/deployer
