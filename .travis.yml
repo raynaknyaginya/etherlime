@@ -6,13 +6,7 @@ install:
 services:
   - docker
 env:
-  - TESTFOLDER=test/cli-commands/*.js
-  - TESTFOLDER=test/deployed-contract/*.js
-  - TESTFOLDER=test/deployer/*.js
-  - TESTFOLDER=test/logger-service/*.js
-  - TESTFOLDER=test/logs-store/*.js
-  - TESTFOLDER=test/testContracts/*.js
-  - TESTFOLDER=test/utils/*.js
+  - TESTFOLDER=test/**/*.js
 script:
   - etherlime ganache &> /dev/null &
   - sleep 10
